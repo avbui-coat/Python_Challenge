@@ -22,14 +22,20 @@ with open(csvpath, newline='',encoding='UTF-8') as csvfile:
         profit_losses.append(row[1])
 
     
-    #sum_profit = sum(int(profit_losses))
 
-    print(len(date_list))
-    print(profit_losses)
-    #print(len(date_list))    
-    #sum_month = len(date_list) -1
-    #print(sum(int(total_profit)))
+    #print(len(date_list))
+    #print(profit_losses)
+    
+    
+    print("Financial Analysis-------------")
+    print(f"Total Months: {len(date_list)}")
+
+    #print(f"Total: ${total_profit}")
+    #print(f"Average  Change: {average_change}")
+    #print(f"Greatest Increase in Profits: {max_increase}")
+    #print(f"Greatest Decrease in Profits: {max_decrease}")
+    #print(f"Total profit/losses:{total}")
    
-    #print(sum_month)
+   
     
         

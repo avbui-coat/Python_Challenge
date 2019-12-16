@@ -10,11 +10,15 @@ with open(csvpath, newline='',encoding='UTF-8') as csvfile:
     budget_csv = csv.reader(csvfile, delimiter=',')
     #data_header = next(budget_csv)
 
+    date_list = []
     for row in budget_csv:
-        date_list = [row[0]]
-        sum_month = len((date_list += 1)) -1
+        
+        date_list.append(row[0])
 
-        print(sum_month)
+    #print(len(date_list))    
+    sum_month = len(date_list) -1
+    print(sum_month)
+    
         
         #print(date_list) - showed list of date_list
     

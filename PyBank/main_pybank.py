@@ -3,32 +3,25 @@ import csv
 
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
-
-def data_stat(budget_data):
-    
-    date = budget_data[0]
-    #profit = int(budget_data[1])
-
-    number_of_month = len(date)
-    
-    #profit_loss_total
-
-    print(f"Total number of month: {number_of_month}")
-
-    
-   # profit_loss_total = profit_loss.sum()
+#def sum(data):
+    #month_total = {"month":data[0], "profit":data[1]}
 
 with open(csvpath, newline='',encoding='UTF-8') as csvfile:
     budget_csv = csv.reader(csvfile, delimiter=',')
-    data_header = next(budget_csv)
+    #data_header = next(budget_csv)
 
     for row in budget_csv:
-        data_stat(row)
+        date_list = [row[0]]
+        sum_month = len((date_list += 1)) -1
 
-
-
+        print(sum_month)
         
-        
+        #print(date_list) - showed list of date_list
+    
+    #print(f"Total number of month: {number_of_month}")
+
+
+
 #for row in budget_csv:
         
     #print(row[1]) -- tested to see all rows at index 1

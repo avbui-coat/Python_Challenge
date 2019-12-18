@@ -16,12 +16,13 @@ with open(csvpath, newline='',encoding='UTF-8') as csvfile:
     profit_losses = []
     
     for row in budget_csv:
-        
-        date_list.append(row[0])
-        
-        profit_losses.append(row[1])
-
     
+        date_list.append(row[0])
+
+        profit_losses.append(float(row[1]))
+    
+
+    #print(sum(profit_losses))
 
     #print(len(date_list))
     #print(profit_losses)
@@ -29,11 +30,15 @@ with open(csvpath, newline='',encoding='UTF-8') as csvfile:
     
     print("Financial Analysis-------------")
     print(f"Total Months: {len(date_list)}")
+    print(f"Total Volume: ${sum(profit_losses)}")
+    
+    print(f"Greatest Increase in Profits: {max(profit_losses)}")
+    print(f"Greatest Decrease in Profits: {min(profit_losses)}")
+
 
     #print(f"Total: ${total_profit}")
     #print(f"Average  Change: {average_change}")
-    #print(f"Greatest Increase in Profits: {max_increase}")
-    #print(f"Greatest Decrease in Profits: {max_decrease}")
+    #
     #print(f"Total profit/losses:{total}")
    
    
